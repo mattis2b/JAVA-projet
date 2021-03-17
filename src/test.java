@@ -1,11 +1,6 @@
 public class test {
 
-	private int Pv = 10;        
-	private int Inventaires;
-	private int i;
-	private int j;
-	private int
+//Les deux classes tests étaient là pour regler le pb avec Git.
+	// A NE PLUS MODIFIER
 	
 }
-
-//testtttttttt mona va devoir demander du code ï¿½ yoann
