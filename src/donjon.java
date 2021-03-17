@@ -35,7 +35,7 @@ public class donjon {
 		//placement de la case à atteindre (V)
 	}
 	
-	public int getting() {
+	public int getting() {         //récupération et affichage des pv du joueur
 		return Pv;
 	}
 	
@@ -49,19 +49,19 @@ public class donjon {
 			
 	}
 	
-	public int getInventaire() {
+	public int getInventaire() {        //récupération et affichage de l'inventaire du joueur
 		return Inventaire;
 	}
 	
-	public void ramasser() {
+	public void ramasser() {            //fonction ramassage d'un objet 
 		if(Inventaire < 5 && mapObjet [i] [j].equals("p")) {
-			Inventaire += 1;
-			for(int i = 0; i< 1; i++) {
-				for(j = 0; j<1; j++) {
+			Inventaire += 1;                   // ajout de l'objet,dans l'inventaire si celui ci n'est pas plein
+			for(int i = 0; i<1; i++) {         // boucle de rajout d'un soin sur la map
+				for(int j = 0; j<1; j++) {     // si il y a eu ajout dans l'inventaire
 					boolean b = true;
 					while(b) {
 						if(mapObjet[i][j].equals(",") && b) {
-							mapObjet[(int) (Math.random()*(15))][(int) (Math.random()*(15))]= "p";
+							mapObjet[(int) (Math.random()*(15))][(int) (Math.random()*(15))]= "s";
 							b = false;
 						}
 					}
@@ -69,11 +69,11 @@ public class donjon {
 			}
 			mapObjet[i][j] = ",";
 		}
-		else {
+		else {                           // si l'inventaire est plein, on affiche la phrase au joueur 
 			if(Inventaire >= 5) {
 				System.err.println("L'invenatire est déjà plein");
 			}
-			else {
+			else {                       // si le joueur ramasse et qu'il n'y a pas de soins on affiche la phrase 
 				System.err.println("Pas d'objet à ramasser");
 			}
 		}
