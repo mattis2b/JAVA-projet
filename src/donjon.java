@@ -1,5 +1,9 @@
 
-public class donjon {            
+// public static void main(String[] args) {}
+//Je n'arrive pas à incruster la méthode main, j'ai tjrs une erreur
+
+
+public class donjon {  
 
 	private int Pv = 10;        //creation des points de vie
 	private int Inventaire;    //creation de l'inventaire vide 
@@ -87,7 +91,8 @@ public class donjon {
 			r+="\n";
 		}
 		return r;
-	}
 	
+	
+}
 	
 }
