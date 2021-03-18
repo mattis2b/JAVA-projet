@@ -1,5 +1,5 @@
 
-public class Joueur {
+public class Joueur { //
 
 	public static void main(String[] args) {  //à demander au prof, cette methode main fait apparaitre des erreurs 
 		

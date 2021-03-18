@@ -1,5 +1,5 @@
 
-public class JoueurEtCarte {
+public class JoueurEtCarte { //
 	
 	private int Pv = 10;        //creation des points de vie
 	private int Inventaire;    //creation de l'inventaire vide 
