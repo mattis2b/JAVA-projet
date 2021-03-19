@@ -1,12 +1,15 @@
 
-public class Joueur { //
+public class Joueur extends Carte { //
 
-	public static void main(String[] args) {  //à demander au prof, cette methode main fait apparaitre des erreurs 
 		
 		int Pv = 10;        //creation des points de vie
 		int Inventaire;    //creation de l'inventaire vide 
 		
-		public int getting() {         //r�cup�ration et affichage des pv du joueur
+		Joueur(int i, int j, String mapObjet){
+		super(i,j,mapObjet);
+		}
+		
+			int getting() {         //recuperation et affichage des pv du joueur
 			return Pv;
 		}
 		
@@ -21,7 +24,7 @@ public class Joueur { //
 				
 		}
 		
-		public int getInventaire() {        //r�cup�ration et affichage de l'inventaire du joueur
+		public int getInventaire() {        //recuperation et affichage de l'inventaire du joueur
 			return Inventaire;
 		}
 		
@@ -61,7 +64,7 @@ public class Joueur { //
 		
 		
 		
-	}
+	
 	
 
 	
