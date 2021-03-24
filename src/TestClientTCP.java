@@ -2,7 +2,7 @@ import java.net.*;
 import java.io.*;
 
 public class TestClientTCP {
-  final static int port = 9792;
+  final static int port = 8790;
 
   public static void main(String[] args) {
 
