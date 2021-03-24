@@ -2,7 +2,7 @@ import java.net.*;
 import java.io.*;
 
 public class TestServeurTCP{
-  final static int port = 8500;
+  final static int port = 8510;
 
   public static void main(String[] args) {
     try {
@@ -11,7 +11,7 @@ public class TestServeurTCP{
 
       while (true) {
         Socket socketClient = socketServeur.accept();
-       ServeurHorloge newJoueur = new ServeurHorloge(socket);
+       ServeurHorloge newJoueur = new ServeurHorloge(socketClient);
         newJoueur.start();
         String message = "";
 
