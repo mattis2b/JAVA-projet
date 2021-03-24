@@ -1,8 +1,8 @@
 import java.net.*;
 import java.io.*;
 
-public class TestServeurTCP {
-  final static int port = 8793;
+public class TestServeurTCP{
+  final static int port = 8500;
 
   public static void main(String[] args) {
     try {
@@ -11,6 +11,8 @@ public class TestServeurTCP {
 
       while (true) {
         Socket socketClient = socketServeur.accept();
+       ServeurHorloge newJoueur = new ServeurHorloge(socket);
+        newJoueur.start();
         String message = "";
 
         System.out.println("Connexion avec : "+socketClient.getInetAddress());
