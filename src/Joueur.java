@@ -37,7 +37,7 @@ public class Joueur extends Carte { //
 		}
 
 		
-		public void ramasser() {            //fonction ramassage d'un objet 
+		public void ramasser() {     //fonction ramassage d'un objet 
 			if(Inventaire < 5 && mapObjet [i][j].equals("p")) {
 				Inventaire += 1;                   // ajout de l'objet,dans l'inventaire si celui ci n'est pas plein
 				for(int i = 0; i<1; i++) {         // boucle de rajout d'un soin sur la map
@@ -90,6 +90,47 @@ public class Joueur extends Carte { //
 				}
 			System.out.println(); 
 		}
+		
+		private String Deplacement;
+		
+		public Joueur(String deplacement) {
+			setDeplacement(deplacement);
+		}
+		
+		public String getDeplacement() {
+			return Deplacement;
+		}
+		
+		public void setDeplacement(String Deplacement) {
+			if (Deplacement == "q")
+				this.Deplacement = Deplacement;
+				System.out.print("QQ ");
+
+			if (Deplacement == "d")
+				this.Deplacement = Deplacement;
+			if (Deplacement == "z")
+				this.Deplacement = Deplacement;
+			if (Deplacement == "s")
+				this.Deplacement = Deplacement;
+			
+			else
+				System.err.println("Veuillez entrer un des déplacements suivant: Z (haut); S(bas); Q(gauche); D(droite).");
+		}
+
+		
+		public void saisieDeplacements(String Deplacement) {  // Q = gauche D = droite Z = haut S = bas 
+			System.out.print("Veuillez saisir le deplacement > ");
+			this.Deplacement = Deplacement;
+
+		}
+		
+		public void afficherDeplacements(String Deplacement) {  // Q = gauche D = droite Z = haut S = bas 
+			System.out.print(Deplacement);
+		}
+
+		
+		
+		
 		
 		
 		
