@@ -3,7 +3,7 @@
 public class Room {
 
 	public static void main(String[] args) {
-        Carte carteTest1 = new Carte(5,5);
+        Carte carteTest1 = new Carte();
         
 
         //System.out.println(carteTest1);

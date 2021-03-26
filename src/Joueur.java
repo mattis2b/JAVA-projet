@@ -5,9 +5,6 @@ public class Joueur extends Carte { //
 		int Pv = 10;        //creation des points de vie
 		int Inventaire;    //creation de l'inventaire vide 
 		
-		Joueur(int i, int j){
-		super(i,j);
-		}
 		
 			int getting() {         //recuperation et affichage des pv du joueur
 			return Pv;
@@ -46,7 +43,7 @@ public class Joueur extends Carte { //
 			}
 			else {                           // si l'inventaire est plein, on affiche la phrase au joueur 
 				if(Inventaire >= 5) {
-					System.err.println("L'invenatire est déjà plein");
+					System.err.println("L'invenatire est deja� plein");
 				}
 				else {                       // si le joueur ramasse et qu'il n'y a pas de soins on affiche la phrase 
 					System.err.println("Pas d'objet à ramasser");

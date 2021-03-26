@@ -2,7 +2,7 @@ import java.net.*;
 import java.io.*;
 
 public class TestServeurTCP{
-  final static int port = 8510;
+  final static int port = 8610;
 
   public static void main(String[] args) {
     try {
@@ -13,7 +13,7 @@ public class TestServeurTCP{
         Socket socketClient = socketServeur.accept();
        ServeurHorloge newJoueur = new ServeurHorloge(socketClient);
         newJoueur.start();
-        String message = "";
+        String message = "Nouveau Joueur dans la partie";
 
         System.out.println("Connexion avec : "+socketClient.getInetAddress());
 
