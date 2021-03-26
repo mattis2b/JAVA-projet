@@ -2,7 +2,7 @@ import java.net.*;
 import java.io.*;
 
 public class TestServeurTCP{
-  final static int port = 8610;
+  final static int port = 8612;
 
   public static void main(String[] args) {
     try {
