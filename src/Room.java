@@ -5,7 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Room{
-	final static int port = 2135;
+	final static int port = 7035;
 
 	public static void main(String[] args) {
         Carte carteTest1 = new Carte();
@@ -20,6 +20,8 @@ try {
     
     joueurTest1.setting(10);
     carteTest1.afficher();
+    joueurTest1.affichercartejoueur();
+
 
     while (true) {
       Socket socketClient = socketServeur.accept();

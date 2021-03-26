@@ -51,4 +51,31 @@ public class Joueur extends Carte { //
 			}
 		}
 		
+		int x;
+		int y;
+		String[][]mapObjet2 = new String[15][15]; //creation de la map de largeur et hauteur 15
+
+		void Cartejoueur() {                   //fonction de creation de map
+			for(int x = 0; x< 15; x++) {         //boucle parcourant l'axe des x
+				for(int y = 0; y< 15; y++) {     //boucle parcourant l'axe des y
+					mapObjet2[x][y]= "-";         //action pour mettre une virgule (signe comme quoi la case est vide) 
+					                             //sur chaque case 
+				} 
+			}
+		}
+		
+		
+		public void affichercartejoueur () {
+			System.out.println();
+			for(int x = 0; x< 15; x++) {        
+				for(int y = 0; y< 15; y++) {
+					System.out.print("-" + mapObjet2[x][y]);
+				}
+				System.out.println("-");
+				}
+			System.out.println(); //oui
+			
+
+		}
+		
 	}
