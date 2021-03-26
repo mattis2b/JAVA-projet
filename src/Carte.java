@@ -39,7 +39,8 @@ public class Carte { //
 				}
 				System.out.println("-");
 				}
-			System.out.println();
+			System.out.println(); //oui
+			
 
 		}
 }
