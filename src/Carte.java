@@ -16,8 +16,8 @@ public class Carte { //
 
 			}
 			
-			for(int i = 0; i< 15; i++) {     //boucle qui place les soins (s), pièges (p) et murs (!)  
-			for(int j = 0; j< 15; j++) {
+			for(int i = 0; i< 6; i++) {     //boucle qui place les soins (s), pièges (p) et murs (!)  
+			for(int j = 0; j< 6; j++) {
 				if(mapObjet[i][j].equals("-")) {
 					mapObjet[(int) (Math.random()*(15))][(int) (Math.random()*(15))]= "s"; 
 				}
@@ -30,6 +30,10 @@ public class Carte { //
 				
 			}
 		}
+			if(mapObjet[i][j].equals("-")) {
+				mapObjet[(int) (Math.random()*(15))][(int) (Math.random()*(15))]= "V"; 
+			}
+			
 		}
 		public void afficher () {
 			System.out.println();
