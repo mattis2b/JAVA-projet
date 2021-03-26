@@ -62,20 +62,21 @@ public class Joueur extends Carte { //
 					                             //sur chaque case 
 				} 
 			}
+		
+			if(mapObjet2[x][y].equals("?")) {   //placement du joueur 
+				mapObjet2[(int) (Math.random()*(15))][(int) (Math.random()*(15))]= "*"; 
+			}
 		}
-		
-		
-		public void affichercartejoueur () {
+			
+		public void affichercartejoueur () {  // affichage de la map du joueur 
 			System.out.println();
 			for(int x = 0; x< 15; x++) {        
 				for(int y = 0; y< 15; y++) {
 					System.out.print("?" + mapObjet2[x][y]);
 				}
-				System.out.println("?");
+				System.out.println(" ");
 				}
-			System.out.println(); //oui
-			
-
+			System.out.println(); //ouis
 		}
 		
 	}

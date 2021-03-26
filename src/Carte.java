@@ -26,6 +26,9 @@ public class Carte { //
 				if(mapObjet[i][j].equals("-")) {
 					mapObjet[(int) (Math.random()*(15))][(int) (Math.random()*(15))]= "!"; 
 				}
+				if(mapObjet[i][j].equals("-")) {
+					mapObjet[(int) (Math.random()*(15))][(int) (Math.random()*(15))]= "M"; 
+				}
 				
 			}
 		}
