@@ -13,7 +13,7 @@ public class Joueur extends Carte { //
 		public void setting(int Pv) {
 			if(Pv >0) {
 				this.Pv=Pv;
-				System.err.println("Vous avez"+Pv+"points de vie.");
+				System.err.println("Vous avez "+Pv+" points de vie.");
 			}
 			else {
 				System.err.println("Vous avez perdu la partie.");	
@@ -43,7 +43,7 @@ public class Joueur extends Carte { //
 			}
 			else {                           // si l'inventaire est plein, on affiche la phrase au joueur 
 				if(Inventaire >= 5) {
-					System.err.println("L'invenatire est deja  plein");
+					System.err.println("L'invenatire est dejaï¿½ plein");
 				}
 				else {                       // si le joueur ramasse et qu'il n'y a pas de soins on affiche la phrase 
 					System.err.println("Pas d'objet Ã  ramasser");
