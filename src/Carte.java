@@ -11,7 +11,7 @@ public class Carte { //
 			for(int i = 0; i< 15; i++) {         //boucle parcourant l'axe des x
 				for(int j = 0; j< 15; j++) {     //boucle parcourant l'axe des y
 					mapObjet[i][j]= "-";         //action pour mettre une virgule (signe comme quoi la case est vide) 
-					                             //sur chaque case sal
+					                             //sur chaque case salut
 				} 
 
 			}
