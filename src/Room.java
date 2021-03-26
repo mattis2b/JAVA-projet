@@ -5,7 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Room{
-	final static int port = 8615;
+	final static int port = 8619;
 
 	public static void main(String[] args) {
         Carte carteTest1 = new Carte();
@@ -13,6 +13,8 @@ public class Room{
 try {
     ServerSocket socketServeur = new ServerSocket(port);
     System.out.println("Bonjour, bienvenue sur le serveur Donjon");
+    System.out.println("Serveur lancé sur " + (port)  );
+    carteTest1.afficher();
 
     while (true) {
       Socket socketClient = socketServeur.accept();
@@ -36,9 +38,9 @@ try {
     }
   } catch (Exception e) {
     e.printStackTrace();
+    System.out.format(" Cannot create to the server, port %d may be busy\n", port);
+    System.exit(-1);
   }
-
-carteTest1.afficher();
 
 }
 }
