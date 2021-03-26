@@ -10,7 +10,7 @@ public class Joueur extends Carte { //
 			return Pv;
 		}
 		
-		public void setting(int Pv) {
+		public void settingPv(int Pv) {
 			if(Pv >0) {
 				this.Pv=Pv;
 				System.err.println("Vous avez "+Pv+" points de vie.");
@@ -25,8 +25,20 @@ public class Joueur extends Carte { //
 			return Inventaire;
 		}
 		
+		public void settingInventaire(int Inventaire) {
+			if(Inventaire >0) {
+				System.err.println("Vous avez "+ Inventaire +" objets dans votre inventaire.");
+			}
+			else {
+				System.err.println("Votre inventaire est vide.");	
+			}
+			
+
+		}
+
+		
 		public void ramasser() {            //fonction ramassage d'un objet 
-			if(Inventaire < 5 && mapObjet [i] [j].equals("p")) {
+			if(Inventaire < 5 && mapObjet [i][j].equals("p")) {
 				Inventaire += 1;                   // ajout de l'objet,dans l'inventaire si celui ci n'est pas plein
 				for(int i = 0; i<1; i++) {         // boucle de rajout d'un soin sur la map
 					for(int j = 0; j<1; j++) {     // si il y a eu ajout dans l'inventaire

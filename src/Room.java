@@ -5,11 +5,11 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Room{
-	final static int port = 4876;
+	final static int port = 1876;
 
 	public static void main(String[] args) {
         Carte carteTest1 = new Carte();
-		@SuppressWarnings("unused") //ligne qui enleve une erreur sur "joueurtest1"
+		@SuppressWarnings("unused") //ligne generer par java qui enleve une erreur sur "joueurtest1"
 		Joueur joueurTest1 = new Joueur();
         
     
@@ -18,10 +18,12 @@ try {
     System.out.println("Bonjour, bienvenue sur le serveur Donjon");
     System.out.println("Serveur lance sur " + (port)  );
     
-    joueurTest1.setting(10);
+    joueurTest1.settingPv(10);
+    joueurTest1.settingInventaire(0);
     carteTest1.afficher();
     joueurTest1.affichercartejoueur();
 
+    
 
     while (true) {
       Socket socketClient = socketServeur.accept();
