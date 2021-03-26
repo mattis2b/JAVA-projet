@@ -76,7 +76,10 @@ public class Joueur extends Carte { //
 				}
 				System.out.println(" ");
 				}
-			System.out.println(); //ouis
+			System.out.println(); 
 		}
+		
+		
+		
 		
 	}
