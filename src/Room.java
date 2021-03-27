@@ -6,7 +6,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Room{
-	final static int port = 6576;
+	final static int port = 8576;
 
 	public static void main(String[] args) {
         Carte carteTest1 = new Carte();
@@ -33,7 +33,7 @@ try {
     	System.out.println("Veuillez saisir un mot :");
     	String str = sc.nextLine();
     	System.out.println("Vous avez saisi : " + str);
-        joueurTest1.deplacement();
+        joueurTest1.deplacement(str);
 
     	
     	
