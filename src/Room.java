@@ -3,9 +3,10 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class Room{
-	final static int port = 5576;
+	final static int port = 6576;
 
 	public static void main(String[] args) {
         Carte carteTest1 = new Carte();
@@ -22,8 +23,26 @@ try {
     joueurTest1.settingInventaire(0);
     carteTest1.afficher();
     joueurTest1.affichercartejoueur();
-    joueurTest1.saisieDeplacements("Q");
-    joueurTest1.setDeplacement("Q");
+    
+    // faire un drapeau vrai jusqu'a arrivee a V
+    // boucle qui fait appel au deplacement 
+    
+    boolean a;
+	while (a = true) {       
+    	Scanner sc = new Scanner(System.in);
+    	System.out.println("Veuillez saisir un mot :");
+    	String str = sc.nextLine();
+    	System.out.println("Vous avez saisi : " + str);
+        joueurTest1.deplacement();
+
+    	
+    	
+    	
+    	
+		sc.close();
+
+    }
+
 
     
 

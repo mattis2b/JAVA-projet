@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class JoueurEtCarte { //
 	
@@ -87,6 +88,14 @@ public class JoueurEtCarte { //
 			r+="\n";
 		}
 		return r;
+		
+		
+		
+		
+		
+		
+		
+		
 	
 	
 }

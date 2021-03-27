@@ -1,4 +1,9 @@
 
+//Ceci importe la classe Scanner du package java.util
+import java.util.Scanner; 
+//Ceci importe toutes les classes du package java.util
+import java.util.*;
+
 public class Joueur extends Carte { //
 
 		
@@ -91,41 +96,38 @@ public class Joueur extends Carte { //
 			System.out.println(); 
 		}
 		
-		private String Deplacement;
-		
-		public Joueur(String deplacement) {
-			setDeplacement(deplacement);
+	
+		private String deplacement;
+
+		public void Deplacements(String deplacement) {
+			deplacement(deplacement);
+			
 		}
 		
 		public String getDeplacement() {
-			return Deplacement;
+			return deplacement;
 		}
 		
-		public void setDeplacement(String Deplacement) {
-			if (Deplacement == "q")
-				this.Deplacement = Deplacement;
-				System.out.print("QQ ");
-
-			if (Deplacement == "d")
-				this.Deplacement = Deplacement;
-			if (Deplacement == "z")
-				this.Deplacement = Deplacement;
-			if (Deplacement == "s")
-				this.Deplacement = Deplacement;
+		public void deplacement(String Deplacement) {
+			if (Deplacement == "s") {
+				this.deplacement = Deplacement;
+			}
+			if (Deplacement == "q") {
+				deplacement = Deplacement;
+			}
+			if (Deplacement == "s") {
+				this.deplacement = Deplacement;
+			}
+			if (Deplacement == "z") {
+				this.deplacement = Deplacement;
+			}
+			if (Deplacement == "d") {
+				this.deplacement = Deplacement;
+			}
 			
-			else
-				System.err.println("Veuillez entrer un des déplacements suivant: Z (haut); S(bas); Q(gauche); D(droite).");
-		}
-
-		
-		public void saisieDeplacements(String Deplacement) {  // Q = gauche D = droite Z = haut S = bas 
-			System.out.print("Veuillez saisir le deplacement > ");
-			this.Deplacement = Deplacement;
-
-		}
-		
-		public void afficherDeplacements(String Deplacement) {  // Q = gauche D = droite Z = haut S = bas 
-			System.out.print(Deplacement);
+			else {
+				System.err.println("Le deplacement n'est pas valide.");
+			}
 		}
 
 		
@@ -133,6 +135,22 @@ public class Joueur extends Carte { //
 		
 		
 		
+
+
+
+
+
+
+
+
+}
+
+
 		
 		
-	}
+		
+		
+		
+		
+		
+	
