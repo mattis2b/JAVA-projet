@@ -6,7 +6,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Room{
-	final static int port = 8576;
+	final static int port = 8597;
 
 	public static void main(String[] args) {
         Carte carteTest1 = new Carte();
@@ -17,42 +17,37 @@ public class Room{
 try {
     ServerSocket socketServeur = new ServerSocket(port);
     System.out.println("Bonjour, bienvenue sur le serveur Donjon");
-    System.out.println("Serveur lance sur " + (port)  );
+    System.out.println("Serveur se lance sur le port " + (port)  );
     
     joueurTest1.settingPv(10);
     joueurTest1.settingInventaire(0);
-    carteTest1.afficher();
+    //carteTest1.afficher();
     joueurTest1.affichercartejoueur();
     
     // faire un drapeau vrai jusqu'a arrivee a V
     // boucle qui fait appel au deplacement 
     
-    boolean a;
-	while (a = true) {       
-    	Scanner sc = new Scanner(System.in);
-    	System.out.println("Veuillez saisir un mot :");
+   boolean a;
+   Scanner sc = new Scanner(System.in);
+	while (a=true) {       
+    	System.out.println("Veuillez saisir un déplacement :"); //Un déplacement ?
     	String str = sc.nextLine();
     	System.out.println("Vous avez saisi : " + str);
         joueurTest1.deplacement(str);
-
-    	
-    	
-    	
-    	
-		sc.close();
+	
 
     }
-
+	sc.close();
 
     
 
     while (true) {
       Socket socketClient = socketServeur.accept();
-     ServeurHorloge newJoueur = new ServeurHorloge(socketClient);
+      ServeurHorloge newJoueur = new ServeurHorloge(socketClient);
       newJoueur.start();
       String message = "";
 
-      System.out.println("Connexion avec : "+socketClient.getInetAddress());
+     /* System.out.println("Connexion avec : "+socketClient.getInetAddress());
 
       // InputStream in = socketClient.getInputStream();
       // OutputStream out = socketClient.getOutputStream();
@@ -61,7 +56,7 @@ try {
         new InputStreamReader(socketClient.getInputStream()));
       PrintStream out = new PrintStream(socketClient.getOutputStream());
       message = in.readLine();
-      out.println(message);
+      out.println(message);			*/
 
       socketClient.close();
       socketServeur.close();

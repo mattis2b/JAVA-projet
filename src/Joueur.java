@@ -99,10 +99,10 @@ public class Joueur extends Carte { //
 	
 		private String deplacement;
 
-		public void Deplacements(String deplacement) {
+	/*	public void Deplacements(String deplacement) {
 			deplacement(deplacement);
 			
-		}
+		}*/
 		
 		public String getDeplacement() {
 			return deplacement;
