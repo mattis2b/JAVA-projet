@@ -34,8 +34,6 @@ try {
     	String str = sc.nextLine();
     	System.out.println("Vous avez saisi : " + str);
         joueurTest1.deplacement(str);
-	
-
     }
 	sc.close();
 

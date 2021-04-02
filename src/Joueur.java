@@ -83,6 +83,8 @@ public class Joueur extends Carte { //
 			if(mapObjet2[x][y].equals("?")) {   //placement du joueur 
 				mapObjet2[(int) (Math.random()*(15))][(int) (Math.random()*(15))]= "*"; 
 			}
+			
+		
 		}
 			
 		public void affichercartejoueur () {  // affichage de la map du joueur 
@@ -109,9 +111,7 @@ public class Joueur extends Carte { //
 		}
 		
 		public void deplacement(String Deplacement) {
-			if (Deplacement == "s") {
-				this.deplacement = Deplacement;
-			}
+			
 			if (Deplacement == "q") {
 				deplacement = Deplacement;
 			}
