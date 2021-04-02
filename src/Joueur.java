@@ -12,6 +12,11 @@ public class Joueur extends Carte { //
 		int x;
 		int y;
 		String[][]position = new String[x][y];
+		String Deplacement1 = "q"; 
+		String Deplacement2 = "s"; 
+		String Deplacement3 = "z"; 
+		String Deplacement4 = "d"; 
+
 		
 		String[][]pointdevueJoueur = new String[15][15]; //creation de la map de largeur et hauteur 15
 //renommer point de vu joueur 
@@ -115,19 +120,19 @@ public class Joueur extends Carte { //
 		
 		public void deplacement(String Deplacement) {
 			
-			if (Deplacement == "q") { 
-				deplacement = Deplacement;
+			if (deplacement.equals(Deplacement1)) { 
+				this.deplacement = Deplacement;
 				x = x--; 
 			}
-			if (Deplacement == "s") {
+			if (deplacement.equals(Deplacement2)) {
 				this.deplacement = Deplacement;
 				y = y++;
 			}
-			if (Deplacement == "z") {
+			if (deplacement.equals(Deplacement3)) {
 				this.deplacement = Deplacement;
 				y = y--;
 			}
-			if (Deplacement == "d") {
+			if (deplacement.equals(Deplacement4)) {
 				this.deplacement = Deplacement;
 				x = x++; 
 

@@ -49,4 +49,68 @@ public class Carte { //
 			
 
 		}
+		
+		public void deplacerH() {
+
+            String tmp;
+            for(int i=0; i<15; i++) {
+                for(int j =0; j<15; j++) {
+                    if(mapObjet[i][j]==""){//chercher position du joueur
+                        if(i-1 >=0) {// Test de la position
+                            tmp = mapObjet[i][j];
+                            mapObjet[i][j] = "-"; //On vide la case
+                            mapObjet[i-1][j] = tmp; //On déplace le perso
+                    }
+                }
+            }
+        }
+
+        }
+        public void deplacerB() {
+
+            String tmp;
+            for(int i=0; i<15; i++) {
+                for(int j =0; j<15; j++) {
+                    if(mapObjet[i][j]==""){//chercher position du joueur
+                        if(i+1 <= 15) {// Test de la position
+                            tmp = mapObjet[i][j];
+                            mapObjet[i][j] = "-"; //On vide la case
+                            mapObjet[i+1][j] = tmp; //On déplace le perso
+                        }
+                    }
+                }
+            }
+        }
+
+        public void deplacerG() {
+
+            String tmp;
+            for(int i=0; i<15; i++) {
+                for(int j =0; j<15; j++) {
+                    if(mapObjet[i][j]=="*"){//chercher position du joueur
+                        if(j-1 >=0) {// Test de la position
+                            tmp = mapObjet[i][j];
+                            mapObjet[i][j] = "-"; //On vide la case
+                            mapObjet[i][j-1] = tmp; //On déplace le perso
+                        }
+                    }
+                }
+            }
+        }
+        public void deplacerD() {
+
+            String tmp;
+            for(int i=0; i<15; i++) {
+                for(int j =0; j<15; j++) {
+                    if(mapObjet[i][j]=="*"){//chercher position du joueur
+                        if(j+1 <= 15) {// Test de la position
+                            tmp = mapObjet[i][j];
+                            mapObjet[i][j] = "-"; //On vide la case
+                            mapObjet[i][j+1] = tmp; //On déplace le perso
+                        }
+                    }
+                }
+            }
+        }
 }
+
