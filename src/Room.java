@@ -6,7 +6,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Room{
-	final static int port = 2348;
+	final static int port = 2349;
 
 	public static void main(String[] args) {
         Carte carteTest1 = new Carte();

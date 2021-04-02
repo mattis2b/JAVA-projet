@@ -120,7 +120,7 @@ public class Joueur extends Carte { //
 		
 		public void deplacement(String Deplacement) {
 			
-			if (deplacement.equals(Deplacement1)) { 
+			if (Deplacement1.equals(deplacement)) { 
 				this.deplacement = Deplacement;
 				x = x--; 
 			}
