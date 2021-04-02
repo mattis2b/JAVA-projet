@@ -8,7 +8,13 @@ public class Joueur extends Carte { //
 
 		
 		int Pv = 10;        //creation des points de vie
-		int Inventaire;    //creation de l'inventaire vide 
+		int Inventaire;    //creation de l'inventaire  
+		int x;
+		int y;
+		String[][]position = new String[x][y];
+		
+		String[][]pointdevueJoueur = new String[15][15]; //creation de la map de largeur et hauteur 15
+//renommer point de vu joueur 
 		
 		
 			int getting() {         //recuperation et affichage des pv du joueur
@@ -68,20 +74,17 @@ public class Joueur extends Carte { //
 			}
 		}
 		
-		int x;
-		int y;
-		String[][]mapObjet2 = new String[15][15]; //creation de la map de largeur et hauteur 15
-
+		
 		Joueur() {                   //fonction de creation de map
 			for(int x = 0; x< 15; x++) {         //boucle parcourant l'axe des x
 				for(int y = 0; y< 15; y++) {     //boucle parcourant l'axe des y
-					mapObjet2[x][y]= "?";         //action pour mettre une virgule (signe comme quoi la case est vide) 
+					pointdevueJoueur[x][y]= "?";         //action pour mettre une virgule (signe comme quoi la case est vide) 
 					                             //sur chaque case 
 				} 
 			}
 		
-			if(mapObjet2[x][y].equals("?")) {   //placement du joueur 
-				mapObjet2[(int) (Math.random()*(15))][(int) (Math.random()*(15))]= "*"; 
+			if(pointdevueJoueur[x][y].equals("?")) {   //placement du joueur 
+				pointdevueJoueur[(int) (Math.random()*(15))][(int) (Math.random()*(15))]= "*"; 
 			}
 			
 		
@@ -91,7 +94,7 @@ public class Joueur extends Carte { //
 			System.out.println();
 			for(int x = 0; x< 15; x++) {        
 				for(int y = 0; y< 15; y++) {
-					System.out.print("?" + mapObjet2[x][y]);
+					System.out.print("?" + pointdevueJoueur[x][y]);
 				}
 				System.out.println(" ");
 				}
@@ -112,17 +115,22 @@ public class Joueur extends Carte { //
 		
 		public void deplacement(String Deplacement) {
 			
-			if (Deplacement == "q") {
+			if (Deplacement == "q") { 
 				deplacement = Deplacement;
+				x = x--; 
 			}
 			if (Deplacement == "s") {
 				this.deplacement = Deplacement;
+				y = y++;
 			}
 			if (Deplacement == "z") {
 				this.deplacement = Deplacement;
+				y = y--;
 			}
 			if (Deplacement == "d") {
 				this.deplacement = Deplacement;
+				x = x++; 
+
 			}
 			
 			else {
