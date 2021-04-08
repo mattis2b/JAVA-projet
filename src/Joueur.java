@@ -105,52 +105,6 @@ public class Joueur extends Carte { //
 				}
 			System.out.println(); 
 		}
-		
-	
-		private String deplacement;
-
-	/*	public void Deplacements(String deplacement) {
-			deplacement(deplacement);
-			
-		}*/
-		
-		/*public String getDeplacement() {
-			return deplacement;
-		}
-		
-		public void deplacement(String Deplacement) {
-			
-			if (Deplacement1.equals(deplacement)) { 
-				this.deplacement = Deplacement;
-				x = x--; 
-			}
-			if (deplacement.equals(Deplacement2)) {
-				this.deplacement = Deplacement;
-				y = y++;
-			}
-			if (deplacement.equals(Deplacement3)) {
-				this.deplacement = Deplacement;
-				y = y--;
-			}
-			if (deplacement.equals(Deplacement4)) {
-				this.deplacement = Deplacement;
-				x = x++; 
-
-			}
-			
-			else {
-				System.err.println("Le deplacement n'est pas valide.");
-			}
-		}*/
-
-		
-		
-		
-		
-		
-
-
-
 
 
 
@@ -159,11 +113,5 @@ public class Joueur extends Carte { //
 }
 
 
-		
-		
-		
-		
-		
-		
-		
+	
 	

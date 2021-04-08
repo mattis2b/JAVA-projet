@@ -6,7 +6,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Room{
-	final static int port = 2442;
+	final static int port = 2440;
 
 	public static void main(String[] args) {
         Carte carteTest1 = new Carte();
@@ -49,6 +49,7 @@ try {
     		System.out.println("Vous vous etes deplacer d'une case vers la droite");
     	}
     	
+    	joueurTest1.affichercartejoueur();
         //joueurTest1.deplacement(str);
     }
 	sc.close();
