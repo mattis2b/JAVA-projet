@@ -6,7 +6,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Room{
-	final static int port = 2349;
+	final static int port = 2442;
 
 	public static void main(String[] args) {
         Carte carteTest1 = new Carte();
@@ -30,10 +30,26 @@ try {
    boolean a;
    Scanner sc = new Scanner(System.in);
 	while (a=true) {       
-    	System.out.println("Veuillez saisir un d�placement :"); //Un d�placement ?
+    	System.out.println("Veuillez saisir un deplacement :");
     	String str = sc.nextLine();
-    	System.out.println("Vous avez saisi : " + str);
-        joueurTest1.deplacement(str);
+    	if (str.equals("z")) {
+    		joueurTest1.deplacerH();
+    		System.out.println("Vous vous etes deplacer d'une case vers le haut");
+    	}
+    	if (str.equals("s")) {
+    		joueurTest1.deplacerB();
+    		System.out.println("Vous vous etes deplacer d'une case vers le bas");
+    	}
+    	if (str.equals("q")) {
+    		joueurTest1.deplacerG();
+    		System.out.println("Vous vous etes deplacer d'une case vers la gauche");
+    	}
+    	if (str.equals("d")) {
+    		joueurTest1.deplacerD();
+    		System.out.println("Vous vous etes deplacer d'une case vers la droite");
+    	}
+    	
+        //joueurTest1.deplacement(str);
     }
 	sc.close();
 

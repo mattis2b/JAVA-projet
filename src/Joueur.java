@@ -71,10 +71,10 @@ public class Joueur extends Carte { //
 			}
 			else {                           // si l'inventaire est plein, on affiche la phrase au joueur 
 				if(Inventaire >= 5) {
-					System.err.println("L'invenatire est dejaï¿½ plein");
+					System.err.println("L'invenatire est déjà plein");
 				}
 				else {                       // si le joueur ramasse et qu'il n'y a pas de soins on affiche la phrase 
-					System.err.println("Pas d'objet Ã  ramasser");
+					System.err.println("Pas d'objet à  ramasser");
 				}
 			}
 		}
@@ -114,7 +114,7 @@ public class Joueur extends Carte { //
 			
 		}*/
 		
-		public String getDeplacement() {
+		/*public String getDeplacement() {
 			return deplacement;
 		}
 		
@@ -141,7 +141,7 @@ public class Joueur extends Carte { //
 			else {
 				System.err.println("Le deplacement n'est pas valide.");
 			}
-		}
+		}*/
 
 		
 		
