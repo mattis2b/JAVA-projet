@@ -12,10 +12,6 @@ public class Joueur extends Carte { //
 		int x;
 		int y;
 		String[][]position = new String[x][y];
-		String Deplacement1 = "q"; 
-		String Deplacement2 = "s"; 
-		String Deplacement3 = "z"; 
-		String Deplacement4 = "d"; 
 
 		
 		String[][]pointdevueJoueur = new String[15][15]; //creation de la map de largeur et hauteur 15

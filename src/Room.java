@@ -6,7 +6,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Room{
-	final static int port = 2440;
+	final static int port = 2510;
 
 	public static void main(String[] args) {
         Carte carteTest1 = new Carte();
@@ -19,38 +19,73 @@ try {
     System.out.println("Bonjour, bienvenue sur le serveur Donjon");
     System.out.println("Serveur se lance sur le port " + (port)  );
     
-    joueurTest1.settingPv(10);
-    joueurTest1.settingInventaire(0);
-    //carteTest1.afficher();
-    joueurTest1.affichercartejoueur();
-    
     // faire un drapeau vrai jusqu'a arrivee a V
     // boucle qui fait appel au deplacement 
     
    boolean a;
    Scanner sc = new Scanner(System.in);
-	while (a=true) {       
+	while (a=true) {  
+		
+		joueurTest1.settingPv(10);
+        joueurTest1.settingInventaire(0);
+    	joueurTest1.affichercartejoueur();
+		
+		
     	System.out.println("Veuillez saisir un deplacement :");
     	String str = sc.nextLine();
-    	if (str.equals("z")) {
+    	
+    	
+    	switch(str) {
+        case "z":
+        	joueurTest1.deplacerH();
+        	System.out.println("Vous vous etes deplace d'une case vers le haut");
+            break;
+        case "s":
+        	joueurTest1.deplacerB();
+    		System.out.println("Vous vous etes deplace d'une case vers le bas");
+            break;
+        case "q":
+        	joueurTest1.deplacerG();
+    		System.out.println("Vous vous etes deplace d'une case vers la gauche");
+            break;
+        case "d":
+        	joueurTest1.deplacerD();
+    		System.out.println("Vous vous etes deplace d'une case vers la droite");
+            break;
+        default:
+        	System.out.println("Le deplacement n'est pas valide, veuillez saisir : z, q, s ou d");    
+            }
+    
+    	System.out.println("");
+    	
+    	/*if (str.equals("z")) {
     		joueurTest1.deplacerH();
-    		System.out.println("Vous vous etes deplacer d'une case vers le haut");
+    		System.out.println("Vous vous etes deplace d'une case vers le haut");
     	}
     	if (str.equals("s")) {
     		joueurTest1.deplacerB();
-    		System.out.println("Vous vous etes deplacer d'une case vers le bas");
+    		System.out.println("Vous vous etes deplace d'une case vers le bas");
     	}
     	if (str.equals("q")) {
     		joueurTest1.deplacerG();
-    		System.out.println("Vous vous etes deplacer d'une case vers la gauche");
+    		System.out.println("Vous vous etes deplace d'une case vers la gauche");
     	}
     	if (str.equals("d")) {
     		joueurTest1.deplacerD();
-    		System.out.println("Vous vous etes deplacer d'une case vers la droite");
+    		System.out.println("Vous vous etes deplace d'une case vers la droite");
+    	}
+    	System.out.println("");
+    	
+    	if (str != "d" & str != "z" & str != "s" & str != "q") {
+    		System.out.println("Le deplacement n'est pas valide, veuillez saisir : z, q, s ou d");
+
     	}
     	
-    	joueurTest1.affichercartejoueur();
-        //joueurTest1.deplacement(str);
+    	else {
+    		System.out.println("Le deplacement n'est pas valide, veuillez saisir : z, q, s ou d");
+    	}*/
+    	
+    	
     }
 	sc.close();
 
@@ -78,7 +113,7 @@ try {
     }
   } catch (Exception e) {
     e.printStackTrace();
-    System.out.format(" Cannot create to the server, port %d may be busy\n", port);
+    System.out.format(" Impossible de se connecter au serveur, le port %d est peut-être occupé\n", port);
     System.exit(-1);
   }
 
