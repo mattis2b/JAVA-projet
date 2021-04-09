@@ -6,14 +6,14 @@ import java.util.*;
 
 public class Joueur extends Carte { //
 
-		
+		int i;  
+		int j; 
 		int Pv = 10;        //creation des points de vie
 		int Inventaire;    //creation de l'inventaire  
 		int x;
 		int y;
 		String[][]position = new String[x][y];
 
-		
 		String[][]pointdevueJoueur = new String[15][15]; //creation de la map de largeur et hauteur 15
 //renommer point de vu joueur 
 		
@@ -67,16 +67,16 @@ public class Joueur extends Carte { //
 			}
 			else {                           // si l'inventaire est plein, on affiche la phrase au joueur 
 				if(Inventaire >= 5) {
-					System.err.println("L'invenatire est déjà plein");
+					System.err.println("L'invenatire est dï¿½jï¿½ plein");
 				}
 				else {                       // si le joueur ramasse et qu'il n'y a pas de soins on affiche la phrase 
-					System.err.println("Pas d'objet à  ramasser");
+					System.err.println("Pas d'objet ï¿½ ramasser");
 				}
 			}
 		}
 		
 		
-		Joueur() {                   //fonction de creation de map
+		Joueur(Carte machin) {                   //fonction de creation de map
 			for(int x = 0; x< 15; x++) {         //boucle parcourant l'axe des x
 				for(int y = 0; y< 15; y++) {     //boucle parcourant l'axe des y
 					pointdevueJoueur[x][y]= "?";         //action pour mettre une virgule (signe comme quoi la case est vide) 
@@ -86,6 +86,9 @@ public class Joueur extends Carte { //
 		
 			if(pointdevueJoueur[x][y].equals("?")) {   //placement du joueur 
 				pointdevueJoueur[(int) (Math.random()*(15))][(int) (Math.random()*(15))]= "*"; 
+				while (pointdevueJoueur[x][y].equals("p")||pointdevueJoueur[x][y].equals("M")||pointdevueJoueur[x][y].equals("s")||pointdevueJoueur[x][y].equals("V")||pointdevueJoueur[x][y].equals("!")) {
+					pointdevueJoueur[(int) (Math.random()*(15))][(int) (Math.random()*(15))]= "*"; 
+				}
 			}
 			
 		
@@ -104,6 +107,30 @@ public class Joueur extends Carte { //
 
 
 
+		
+		/* public class ExceptionMort extends Exception {
+
+    public ExceptionMort() {
+        super();
+    }
+    public ExceptionMort (String Message) {
+        super(Message);//PrÃ©vient le joueur qu'il est mort
+    }
+}
+
+
+Classe Joueur :
+
+    public void settingPv(int Pv) throws ExceptionMort {
+            if(Pv <=0) {
+                throw new ExceptionMort();
+            }
+            else {
+                this.Pv = Pv;
+                System.err.println("Vous avez "+Pv+" points de vie !");
+            }
+
+        } */
 
 
 }
