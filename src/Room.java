@@ -11,7 +11,7 @@ public class Room{
 	public static void main(String[] args) {
         Carte carteTest1 = new Carte();
 		@SuppressWarnings("unused") //ligne generer par java qui enleve une erreur sur "joueurtest1"
-		Joueur joueurTest1 = new Joueur();
+		Joueur joueurTest1 = new Joueur(carteTest1);
         
     
 try {
@@ -58,32 +58,6 @@ try {
     
     	System.out.println("");
     	
-    	/*if (str.equals("z")) {
-    		joueurTest1.deplacerH();
-    		System.out.println("Vous vous etes deplace d'une case vers le haut");
-    	}
-    	if (str.equals("s")) {
-    		joueurTest1.deplacerB();
-    		System.out.println("Vous vous etes deplace d'une case vers le bas");
-    	}
-    	if (str.equals("q")) {
-    		joueurTest1.deplacerG();
-    		System.out.println("Vous vous etes deplace d'une case vers la gauche");
-    	}
-    	if (str.equals("d")) {
-    		joueurTest1.deplacerD();
-    		System.out.println("Vous vous etes deplace d'une case vers la droite");
-    	}
-    	System.out.println("");
-    	
-    	if (str != "d" & str != "z" & str != "s" & str != "q") {
-    		System.out.println("Le deplacement n'est pas valide, veuillez saisir : z, q, s ou d");
-
-    	}
-    	
-    	else {
-    		System.out.println("Le deplacement n'est pas valide, veuillez saisir : z, q, s ou d");
-    	}*/
     	
     	
     }
@@ -113,7 +87,7 @@ try {
     }
   } catch (Exception e) {
     e.printStackTrace();
-    System.out.format(" Impossible de se connecter au serveur, le port %d est peut-être occupé\n", port);
+    System.out.format(" Impossible de se connecter au serveur, le port %d est peut-ï¿½tre occupï¿½\n", port);
     System.exit(-1);
   }
 

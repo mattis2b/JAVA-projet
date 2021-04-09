@@ -1,8 +1,6 @@
 
 public class Carte { //
-
-	int i;
-	int j;	          
+	          
 	String[][]mapObjet = new String[15][15]; //creation de la map de largeur et hauteur 15
 
 		 
