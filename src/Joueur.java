@@ -48,8 +48,8 @@ public class Joueur extends Carte { //
 		}
 
 		
-		public void ramasser() {     //fonction ramassage d'un objet 
-			if(Inventaire < 5 && mapObjet [i][j].equals("p")) {
+		public void ramasser(int x, int y) {     //fonction ramassage d'un objet 
+			if(Inventaire < 5 && mapObjet [x][y].equals("p")) {
 				Inventaire += 1;                   // ajout de l'objet,dans l'inventaire si celui ci n'est pas plein
 				for(int i = 0; i<1; i++) {         // boucle de rajout d'un soin sur la map
 					for(int j = 0; j<1; j++) {     // si il y a eu ajout dans l'inventaire
@@ -62,7 +62,7 @@ public class Joueur extends Carte { //
 						}
 					}
 				}
-				mapObjet[i][j] = ",";
+				mapObjet[x][y] = ",";
 			}
 			else {                           // si l'inventaire est plein, on affiche la phrase au joueur 
 				if(Inventaire >= 5) {
