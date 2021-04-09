@@ -2,6 +2,7 @@
 public class Carte { //
 	          
 	String[][]mapObjet = new String[15][15]; //creation de la map de largeur et hauteur 15
+	String[][]pointdevueJoueur = new String[15][15]; //creation de la map de largeur et hauteur 15
 
 		int i;  
 		int j; 
@@ -56,11 +57,11 @@ public class Carte { //
             String tmp;
             for(int i=0; i<15; i++) {
                 for(int j =0; j<15; j++) {
-                    if(mapObjet[i][j]=="*"){//chercher position du joueur
+                    if(pointdevueJoueur[i][j]=="*"){//chercher position du joueur
                         if(i-1 >=0) {// Test de la position
-                            tmp = mapObjet[i][j];
-                            mapObjet[i][j] = "-"; //On vide la case
-                            mapObjet[i-1][j] = tmp; //On déplace le perso
+                            tmp = pointdevueJoueur[i][j];
+                            pointdevueJoueur[i][j] = "-"; //On vide la case
+                            pointdevueJoueur[i-1][j] = tmp; //On déplace le perso
                     }
                 }
             }
@@ -72,11 +73,11 @@ public class Carte { //
             String tmp;
             for(int i=0; i<15; i++) {
                 for(int j =0; j<15; j++) {
-                    if(mapObjet[i][j]=="*"){//chercher position du joueur
+                    if(pointdevueJoueur[i][j]=="*"){//chercher position du joueur
                         if(i+1 <= 15) {// Test de la position
-                            tmp = mapObjet[i][j];
-                            mapObjet[i][j] = "-"; //On vide la case
-                            mapObjet[i+1][j] = tmp; //On déplace le perso
+                            tmp = pointdevueJoueur[i][j];
+                            pointdevueJoueur[i][j] = "-"; //On vide la case
+                            pointdevueJoueur[i+1][j] = tmp; //On déplace le perso
                         }
                     }
                 }
@@ -88,11 +89,11 @@ public class Carte { //
             String tmp;
             for(int i=0; i<15; i++) {
                 for(int j =0; j<15; j++) {
-                    if(mapObjet[i][j]=="*"){//chercher position du joueur
+                    if(pointdevueJoueur[i][j]=="*"){//chercher position du joueur
                         if(j-1 >=0) {// Test de la position
-                            tmp = mapObjet[i][j];
-                            mapObjet[i][j] = "-"; //On vide la case
-                            mapObjet[i][j-1] = tmp; //On déplace le perso
+                            tmp = pointdevueJoueur[i][j];
+                            pointdevueJoueur[i][j] = "-"; //On vide la case
+                            pointdevueJoueur[i][j-1] = tmp; //On déplace le perso
                         }
                     }
                 }
@@ -103,11 +104,11 @@ public class Carte { //
             String tmp;
             for(int i=0; i<15; i++) {
                 for(int j =0; j<15; j++) {
-                    if(mapObjet[i][j]=="*"){//chercher position du joueur
+                    if(pointdevueJoueur[i][j]=="*"){//chercher position du joueur
                         if(j+1 <= 15) {// Test de la position
-                            tmp = mapObjet[i][j];
-                            mapObjet[i][j] = "-"; //On vide la case
-                            mapObjet[i][j+1] = tmp; //On déplace le perso
+                            tmp = pointdevueJoueur[i][j];
+                            pointdevueJoueur[i][j] = "-"; //On vide la case
+                            pointdevueJoueur[i][j+1] = tmp; //On déplace le perso
                         }
                     }
                 }
