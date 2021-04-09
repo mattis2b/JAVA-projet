@@ -3,7 +3,10 @@ public class Carte { //
 	          
 	String[][]mapObjet = new String[15][15]; //creation de la map de largeur et hauteur 15
 
-		 
+		int i;  
+		int j; 
+		
+		
 		Carte() {                   //fonction de creation de map
 			for(int i = 0; i< 15; i++) {         //boucle parcourant l'axe des x
 				for(int j = 0; j< 15; j++) {     //boucle parcourant l'axe des y

@@ -6,8 +6,7 @@ import java.util.*;
 
 public class Joueur extends Carte { //
 
-		int i;  
-		int j; 
+		
 		int Pv = 10;        //creation des points de vie
 		int Inventaire;    //creation de l'inventaire  
 		int x;
@@ -104,7 +103,11 @@ public class Joueur extends Carte { //
 				}
 			System.out.println(); 
 		}
-
+		
+		public void ActualisationAffichageJoueur (Carte machin) {
+			pointdevueJoueur[x][y] = "*";
+			
+		}
 
 
 		
