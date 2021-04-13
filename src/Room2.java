@@ -70,11 +70,7 @@ public class Room2 extends Thread  {
         }
         
         
-        
-        
-        
-        
-        
+  
 
 }
 
