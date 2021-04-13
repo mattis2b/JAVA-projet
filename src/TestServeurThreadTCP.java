@@ -12,7 +12,7 @@ public class TestServeurThreadTCP extends Thread {
       System.out.println("Lancement du serveur");
       while (true) {
         Socket socketClient = socketServeur.accept();
-        TestServeurThreadTCP t = new TestServeurThreadTCP(socketClient);
+        Room t = new Room (socketClient);
         t.start();
       }
     } catch (Exception e) {

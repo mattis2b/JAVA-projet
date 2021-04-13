@@ -92,7 +92,19 @@ public class Joueur extends Carte { //
 			
 		
 		}
+		public String affichercartejoueur2 () {
+			String truc= "\n";
+			//System.out.println();
+			for(int x = 0; x< 15; x++) {        
+				for(int y = 0; y< 15; y++) {
+					truc+= ""+("?" + pointdevueJoueur[x][y]);
+				}
+				truc+="\n";
+				}
+			truc+="\n"; 
+			return truc;
 			
+		}
 		public void affichercartejoueur () {  // affichage de la map du joueur 
 			System.out.println();
 			for(int x = 0; x< 15; x++) {        
@@ -120,7 +132,8 @@ public class Joueur extends Carte { //
                             tmp = pointdevueJoueur[i][j];
                             pointdevueJoueur[i][j] = "-"; //On vide la case
                             pointdevueJoueur[i-1][j] = tmp; //On déplace le perso
-                    }
+                            
+                        }
                 }
             }
             }
