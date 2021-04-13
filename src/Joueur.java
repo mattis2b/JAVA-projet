@@ -9,8 +9,8 @@ public class Joueur extends Carte { //
 		
 		int Pv = 10;        //creation des points de vie
 		int Inventaire;    //creation de l'inventaire  
-		int x;
-		int y;
+		int x = (int) (Math.random()*(15));
+		int y = (int) (Math.random()*(15));
 		String[][]position = new String[x][y];
 
 		String[][]pointdevueJoueur = new String[15][15]; //creation de la map de largeur et hauteur 15
@@ -48,8 +48,8 @@ public class Joueur extends Carte { //
 		}
 
 		
-		public void ramasser() {     //fonction ramassage d'un objet 
-			if(Inventaire < 5 && mapObjet [i][j].equals("p")) {
+		public void ramasser(int x, int y) {     //fonction ramassage d'un objet 
+			if(Inventaire < 5 && mapObjet [x][y].equals("p")) {
 				Inventaire += 1;                   // ajout de l'objet,dans l'inventaire si celui ci n'est pas plein
 				for(int i = 0; i<1; i++) {         // boucle de rajout d'un soin sur la map
 					for(int j = 0; j<1; j++) {     // si il y a eu ajout dans l'inventaire
@@ -62,7 +62,7 @@ public class Joueur extends Carte { //
 						}
 					}
 				}
-				mapObjet[i][j] = ",";
+				mapObjet[x][y] = ",";
 			}
 			else {                           // si l'inventaire est plein, on affiche la phrase au joueur 
 				if(Inventaire >= 5) {
@@ -109,7 +109,75 @@ public class Joueur extends Carte { //
 			
 		}
 
+		public void deplacerH() {
+			
+			y=y+1;
+            String tmp;
+            for(int i=0; i<15; i++) {
+                for(int j =0; j<15; j++) {
+                    if(pointdevueJoueur[i][j]=="*"){//chercher position du joueur
+                        if(i-1 >=0) {// Test de la position
+                            tmp = pointdevueJoueur[i][j];
+                            pointdevueJoueur[i][j] = "-"; //On vide la case
+                            pointdevueJoueur[i-1][j] = tmp; //On déplace le perso
+                    }
+                }
+            }
+            }
+		}
+		
+		public void deplacerB() {
+			
+			y=y-1;
+            String tmp;
+            for(int i=0; i<15; i++) {
+                for(int j =0; j<15; j++) {
+                    if(pointdevueJoueur[i][j]=="*"){//chercher position du joueur
+                        if(i+1 <= 15) {// Test de la position
+                            tmp = pointdevueJoueur[i][j];
+                            pointdevueJoueur[i][j] = "-"; //On vide la case
+                            pointdevueJoueur[i+1][j] = tmp; //On déplace le perso
+                        }
+                    }
+                }
+            }
+        }
 
+        public void deplacerG() {
+
+        	x=x-1;
+            String tmp;
+            for(int i=0; i<15; i++) {
+                for(int j =0; j<15; j++) {
+                    if(pointdevueJoueur[i][j]=="*"){//chercher position du joueur
+                        if(j-1 >=0) {// Test de la position
+                            tmp = pointdevueJoueur[i][j];
+                            pointdevueJoueur[i][j] = "-"; //On vide la case
+                            pointdevueJoueur[i][j-1] = tmp; //On déplace le perso
+                        }
+                    }
+                }
+            }
+        }
+        public void deplacerD() {
+        	
+        	x=x+1;
+            String tmp;
+            for(int i=0; i<15; i++) {
+                for(int j =0; j<15; j++) {
+                    if(pointdevueJoueur[i][j]=="*"){//chercher position du joueur
+                        if(j+1 <= 15) {// Test de la position
+                            tmp = pointdevueJoueur[i][j];
+                            pointdevueJoueur[i][j] = "-"; //On vide la case
+                            pointdevueJoueur[i][j+1] = tmp; //On déplace le perso
+                        }
+                    }
+                }
+            }
+        }
+        
+            
+            
 		
 		/* public class ExceptionMort extends Exception {
 

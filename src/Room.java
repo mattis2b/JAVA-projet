@@ -1,4 +1,4 @@
-import java.io.BufferedReader;
+import java.	io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.net.ServerSocket;
@@ -6,7 +6,9 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Room{
+
 	final static int port = 2519;
+
 
 	public static void main(String[] args) {
         Carte carteTest1 = new Carte();
