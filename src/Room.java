@@ -6,7 +6,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Room{
-	final static int port = 2513;
+	final static int port = 2519;
 
 	public static void main(String[] args) {
         Carte carteTest1 = new Carte();
@@ -25,9 +25,10 @@ try {
    boolean a;
    Scanner sc = new Scanner(System.in);
 	while (a=true) {  
-		
 		joueurTest1.settingPv(10);
+	
         joueurTest1.settingInventaire(0);
+        
     	joueurTest1.affichercartejoueur();
 		
 		
