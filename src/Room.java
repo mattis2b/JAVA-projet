@@ -7,11 +7,11 @@ import java.util.Scanner;
 
 public class Room{
 
-	final static int port = 2511;
+	final static int port = 2515;
 
 
 	public static void main(String[] args) {
-        Carte carteTest1 = new Carte();
+		Carte carteTest1 = new Carte();
 		@SuppressWarnings("unused") //ligne generer par java qui enleve une erreur sur "joueurtest1"
 		Joueur joueurTest1 = new Joueur(carteTest1);
         
@@ -20,15 +20,18 @@ try {
     ServerSocket socketServeur = new ServerSocket(port);
     System.out.println("Bonjour, bienvenue sur le serveur Donjon");
     System.out.println("Serveur se lance sur le port " + (port)  );
-    
+
+
     // faire un drapeau vrai jusqu'a arrivee a V
     // boucle qui fait appel au deplacement 
-    
+
+   
    boolean a = true;
    Scanner sc = new Scanner(System.in);
-	while (a) {  
+	while (a=true) {  
+
 		joueurTest1.settingPv(10);
-	
+
         joueurTest1.settingInventaire(0);
         
     	joueurTest1.affichercartejoueur();
@@ -66,11 +69,32 @@ try {
     }
 	sc.close();
 
-    
 
-    
+
+    while (true) {
+      Socket socketClient = socketServeur.accept();
+      ServeurHorloge newJoueur = new ServeurHorloge(socketClient);
+      newJoueur.start();
+      String message = "";
+
+     /* System.out.println("Connexion avec : "+socketClient.getInetAddress());
+      // InputStream in = socketClient.getInputStream();
+      // OutputStream out = socketClient.getOutputStream();
+      BufferedReader in = new BufferedReader(
+        new InputStreamReader(socketClient.getInputStream()));
+      PrintStream out = new PrintStream(socketClient.getOutputStream());
+      message = in.readLine();
+      out.println(message);			*/
+
+      socketClient.close();
+      socketServeur.close();
+    }
+
   } catch (Exception e) {
-    
+    e.printStackTrace();
+    System.out.format(" Impossible de se connecter au serveur, le port %d est peut-�tre occup�\n", port);
+    System.exit(-1);
+
   }
 
 }

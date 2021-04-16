@@ -11,11 +11,11 @@ public class Client {
         private Socket socket;
         public Client() {
                 try {
-                        socket = new Socket("127.0.0.1",1028);
+                        socket = new Socket("127.0.0.1",1029);
                         out = new PrintStream (socket.getOutputStream());
                         in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 }catch(IOException e) {
-                        System.out.println("ça marche pas");
+                        System.out.println("Veuillez lancer le serveur d'abord");
                 }
                 
         }

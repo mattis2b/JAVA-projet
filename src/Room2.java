@@ -20,6 +20,8 @@ public class Room2 extends Thread  {
                 }catch (IOException e) {
                         e.printStackTrace();
                 }
+                
+                
                 Carte carteTest1 = new Carte();
                 joueurTest1= new Joueur(carteTest1);
         }
@@ -27,10 +29,9 @@ public class Room2 extends Thread  {
         public void run() {
                 boolean a = true;
                 try {
-                        while(a) {
+                	  while(a) {
+                		        out.println("Bonjour, bienvenue sur le serveur Donjon \nVous allez apparaître aléatoirement dans un Donjon, atteignez la case <V> en vie pour gagner!");
                                 String tmp = in.readLine(); //Recupere le coup du joueur
-                                
-                                
                                 GestionCoup(tmp);
                                 out.println(joueurTest1.affichercartejoueur2());
                                 }

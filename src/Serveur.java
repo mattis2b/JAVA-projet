@@ -7,7 +7,7 @@ import java.net.UnknownHostException;
 
 public class Serveur {
         
-private static int PORT = 1028;
+private static int PORT = 1029;
         
         public Serveur(){
                 ServerSocket s = null;
@@ -26,7 +26,9 @@ private static int PORT = 1028;
                         try {
                                 socket = s.accept();
                                 Room2 newPlayer = new Room2(socket);
+                                System.out.println("Bonjour, bienvenue sur le serveur Donjon \nVous allez apparaître aléatoirement dans un Donjon, atteignez la case <V> en vie pour gagner!");
                                 newPlayer.start();
+                                
                                 
                         }catch(IOException e) {
                                 System.err.println("ca marche pas");
